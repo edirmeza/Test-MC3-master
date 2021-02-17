@@ -1,0 +1,175 @@
+{
+    "workflowApiVersion": "1.1",
+	"key" : "564a3b1e-93f5-495d-ad4f-c9d183bffb0b",
+    "metaData": {
+        "icon": "images/icon.png",
+        "iconSmall": "images/iconSmall.png",
+        "category": "message"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "Confirm Appointment",
+          "description": "A custom activity to send an appointment confirmation",
+          "step1Label": "Configure Activity"
+        }
+    },
+    "arguments": {
+        "execute": {
+           "inArguments":[
+            {
+                "eventCode": "sendJourneyBuilderIntent",
+                "eventSourceId": "MarketingCloud",
+                "countryId": "{{Contact.Attribute.\"KAVAK_Demo\".\"CountryId\"}}",
+                "eventData": {
+                  "type": "confirmAppointment",
+                  "chatPlatform": "whatsapp",
+                  "customerPhoneNumber": "{{Contact.Attribute.\"KAVAK_Demo\".\"PhoneNumber\"}}",
+                  "intent": "confirm_citageneral",
+                  "params": {
+                    "opp_venta": "{{Contact.Attribute.\"KAVAK_Demo\".\"OppVenta\"}}",
+                    "primerNombre": "{{Contact.Attribute.\"KAVAK_Demo\".\"PrimerNombre\"}}",
+                    "diaCita": "{{Contact.Attribute.\"KAVAK_Demo\".\"DiaCita\"}}",
+                    "HoraPMAM": "{{Contact.Attribute.\"KAVAK_Demo\".\"HoraCita\"}}",
+                    "CentroHUB": "{{Contact.Attribute.\"KAVAK_Demo\".\"CentroHUB\"}}",
+                    "referenciaDireccion": "{{Contact.Attribute.\"KAVAK_Demo\".\"ReferenciaDir\"}}",
+                    "direccion": "{{Contact.Attribute.\"KAVAK_Demo\".\"Dir\"}}",
+                    "Auto": "{{Contact.Attribute.\"KAVAK_Demo\".\"Auto\"}}"
+                  }
+                }
+              }								
+			],
+          "outArguments": [],
+          "url": "https://kavak-ca-confirmappointment.herokuapp.com/execute",
+           "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+      "applicationExtensionKey": "564a3b1e-93f5-495d-ad4f-c9d183bffb0b",
+      "save": {
+        "url": "https://kavak-ca-confirmappointment.herokuapp.com/save",
+          "verb": "POST",
+        "useJwt": true
+       },
+       "publish": {
+        "url": "https://kavak-ca-confirmappointment.herokuapp.com/publish",
+           "verb": "POST",
+        "useJwt": true
+       },
+      "stop": {
+        "url": "https://kavak-ca-confirmappointment.herokuapp.com/stop",
+           "verb": "POST",
+        "useJwt": true
+      },
+      "validate": {
+        "url": "https://kavak-ca-confirmappointment.herokuapp.com/validate",
+        "verb": "POST",
+        "useJwt": true
+      }
+    },
+    "wizardSteps": [
+        { "label": "Configure Activity", "key": "step1" }
+    ],
+    "userInterfaces": {
+        "configModal": {
+            "height": 400,
+            "width": 1000,
+          "fullscreen": false
+        }
+    },
+   "schema": {
+       "arguments": {
+           "execute": {
+               "inArguments": [
+                    {
+                        "eventCode": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        },
+                        "eventSourceId": {
+                            "dataType": "Text",
+                            "isNullable": false,
+                            "direction": "in"
+                        },
+                        "countryId": {
+                            "dataType": "Integer",
+                            "isNullable": false,
+                            "direction": "in"
+                        },
+                        "eventData": {
+                            "type": {
+                                "dataType": "Text",
+                                "isNullable": false,
+                                "direction": "in"
+                            },
+                            "chatPlatform": {
+                                "dataType": "Text",
+                                "isNullable": false,
+                                "direction": "in"
+                            },
+                            "customerPhoneNumber": {
+                                "dataType": "Text",
+                                "isNullable": false,
+                                "direction": "in"
+                            },
+                            "intent": {
+                                "dataType": "Text",
+                                "isNullable": false,
+                                "direction": "in"
+                            },
+                            "params": {
+                                "opp_venta": {
+                                    "dataType": "Text",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                },
+                                "primerNombre": {
+                                    "dataType": "Text",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                },
+                                "diaCita": {
+                                    "dataType": "Date",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                },
+                                "HoraPMAM": {
+                                    "dataType": "Text",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                },
+                                "CentroHUB": {
+                                    "dataType": "Text",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                },
+                                "referenciaDireccion": {
+                                    "dataType": "Text",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                },
+                                "direccion": {
+                                    "dataType": "Text",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                },
+                                "Auto": {
+                                    "dataType": "Text",
+                                    "isNullable": false,
+                                    "direction": "in"
+                                }
+                            }
+                        }
+                    }
+                ],
+               "outArguments": []
+           }
+       }
+   }
+}
