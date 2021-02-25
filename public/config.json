@@ -1,6 +1,6 @@
 {
     "workflowApiVersion": "1.1",
-	"key" : "564a3b1e-93f5-495d-ad4f-c9d183bffb0b",
+	"key" : "91346d9b-0647-4cf0-93a0-69793f429b33",
     "metaData": {
         "icon": "images/icon.png",
         "iconSmall": "images/iconSmall.png",
@@ -40,7 +40,7 @@
               }								
 			],
           "outArguments": [],
-          "url": "https://kavak-ca-confirmappointment.herokuapp.com/execute",
+          "url": "https://limitless-reef-37487.herokuapp.com/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -50,24 +50,24 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "564a3b1e-93f5-495d-ad4f-c9d183bffb0b",
+      "applicationExtensionKey": "91346d9b-0647-4cf0-93a0-69793f429b33",
       "save": {
-        "url": "https://kavak-ca-confirmappointment.herokuapp.com/save",
+        "url": "https://limitless-reef-37487.herokuapp.com/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://kavak-ca-confirmappointment.herokuapp.com/publish",
+        "url": "https://limitless-reef-37487.herokuapp.com/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://kavak-ca-confirmappointment.herokuapp.com/stop",
+        "url": "https://limitless-reef-37487.herokuapp.com/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://kavak-ca-confirmappointment.herokuapp.com/validate",
+        "url": "https://limitless-reef-37487.herokuapp.com/validate",
         "verb": "POST",
         "useJwt": true
       }
