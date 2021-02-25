@@ -91,7 +91,7 @@ define([
                   }
                 }
         }];
-        payload['arguments'].execute.url = "https://kavak-ca-confirmappointment.herokuapp.com/execute";
+        payload['arguments'].execute.url = "https://limitless-reef-37487.herokuapp.com/execute";
         payload['schema'].arguments.execute.inArguments = [
             {
                 "eventCode": {
@@ -121,7 +121,7 @@ define([
                         "direction": "in"
                     },
                     "customerPhoneNumber": {
-                        "dataType": "Text",
+                        "dataType": "Phone",
                         "isNullable": false,
                         "direction": "in"
                     },
@@ -176,10 +176,10 @@ define([
             }
         ];
         payload['schema'].arguments.execute.outArguments = [];
-        payload['configurationArguments'].publish.url = "https://kavak-ca-confirmappointment.herokuapp.com/publish";
-        payload['configurationArguments'].save.url = "https://kavak-ca-confirmappointment.herokuapp.com/save";
-        payload['configurationArguments'].stop.url = "https://kavak-ca-confirmappointment.herokuapp.com/stop";
-        payload['configurationArguments'].validate.url = "https://kavak-ca-confirmappointment.herokuapp.com/validate";
+        payload['configurationArguments'].publish.url = "https://limitless-reef-37487.herokuapp.com/publish";
+        payload['configurationArguments'].save.url = "https://limitless-reef-37487.herokuapp.com/save";
+        payload['configurationArguments'].stop.url = "https://limitless-reef-37487.herokuapp.com/stop";
+        payload['configurationArguments'].validate.url = "https://limitless-reef-37487.herokuapp.com/validate";
         payload['metaData'].isConfigured = true;
 
         console.log(payload);

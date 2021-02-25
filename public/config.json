@@ -114,7 +114,7 @@
                                 "direction": "in"
                             },
                             "customerPhoneNumber": {
-                                "dataType": "Text",
+                                "dataType": "Phone",
                                 "isNullable": false,
                                 "direction": "in"
                             },
